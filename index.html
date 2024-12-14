@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Modern CSV Viewer - Interactive Data Visualization Tool</title>
+    <meta name="description"
+        content="A modern CSV file viewer with features like pagination, sorting, resizable columns, and drag & drop upload for easy data visualization.">
+    <meta name="keywords" content="CSV viewer, data visualization, file upload, table viewer, data analysis">
+    <meta name="author" content="Junior Rumiche">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Modern CSV Viewer">
+    <meta property="og:description" content="Interactive CSV file viewer with advanced features for data visualization">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://junior-rumiche.vercel.app">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="upload-area" id="uploadArea">
+            <input type="file" id="fileInput" accept=".csv" hidden>
+            <div class="upload-icon">
+                <i class="fas fa-file-csv"></i>
+            </div>
+            <h2>Drag your CSV file here</h2>
+            <p>or</p>
+            <button class="upload-button">Select file</button>
+            <p class="file-name" id="fileName"></p>
+            <div class="upload-progress" id="uploadProgress">
+                <div class="progress-bar"></div>
+                <p class="progress-text">Uploading file...</p>
+            </div>
+        </div>
+        <div class="csv-preview" id="csvPreview">
+            <div class="preview-header">
+                <h3>File Preview</h3>
+                <button class="close-preview" id="closePreview" aria-label="Close preview">&times;</button>
+            </div>
+            <div class="table-container">
+                <table id="csvTable" role="grid" aria-label="CSV data table"></table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/previsualizer.js"></script>
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebApplication",
+        "name": "Modern CSV Viewer",
+        "description": "A modern CSV file viewer with features like pagination, sorting, resizable columns, and drag & drop upload.",
+        "applicationCategory": "Data Visualization Tool", 
+        "operatingSystem": "Any",
+        "author": {
+            "@type": "Person",
+            "name": "Junior Rumiche"
+        }
+    }
+    </script>
+</body>
+
+</html>
