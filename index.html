@@ -59,31 +59,110 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="upload-area" id="uploadArea">
-            <input type="file" id="fileInput" accept=".csv" hidden>
-            <div class="upload-icon">
-                <i class="fas fa-file-csv"></i>
+    <header class="main-header">
+        <h1>Visor de CSV Moderno</h1>
+        <p class="header-description">Una herramienta profesional y gratuita para visualizar y analizar archivos CSV de
+            manera eficiente</p>
+    </header>
+
+    <main>
+        <section class="features">
+            <h2>Características Principales</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-table"></i>
+                    <h3>Visualización Interactiva</h3>
+                    <p>Visualiza tus datos CSV en una tabla moderna e interactiva con opciones de ordenamiento y
+                        filtrado avanzado.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-arrows-alt-h"></i>
+                    <h3>Columnas Ajustables</h3>
+                    <p>Personaliza el ancho de las columnas según tus necesidades para una mejor visualización de los
+                        datos.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mouse-pointer"></i>
+                    <h3>Arrastrar y Soltar</h3>
+                    <p>Simplemente arrastra y suelta tu archivo CSV para comenzar a analizarlo instantáneamente.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Privacidad Garantizada</h3>
+                    <p>Tus datos se procesan localmente en tu navegador, sin almacenamiento en servidores externos.</p>
+                </div>
             </div>
-            <h2>Arrastra tu archivo CSV aquí</h2>
-            <p>o</p>
-            <button class="upload-button">Seleccionar archivo</button>
-            <p class="file-name" id="fileName"></p>
-            <div class="upload-progress" id="uploadProgress">
-                <div class="progress-bar"></div>
-                <p class="progress-text">Subiendo archivo...</p>
+        </section>
+
+        <section class="upload-section">
+            <h2>Comienza a Analizar tus Datos</h2>
+            <p class="upload-description">Sube tu archivo CSV y descubre una nueva forma de visualizar y analizar tus
+                datos. Compatible con archivos CSV de cualquier tamaño.</p>
+
+            <div class="container">
+                <div class="upload-area" id="uploadArea">
+                    <input type="file" id="fileInput" accept=".csv" hidden>
+                    <div class="upload-icon">
+                        <i class="fas fa-file-csv"></i>
+                    </div>
+                    <h2>Arrastra tu archivo CSV aquí</h2>
+                    <p>o</p>
+                    <button class="upload-button">Seleccionar archivo</button>
+                    <p class="file-name" id="fileName"></p>
+                    <div class="upload-progress" id="uploadProgress">
+                        <div class="progress-bar"></div>
+                        <p class="progress-text">Subiendo archivo...</p>
+                    </div>
+                </div>
+                <div class="csv-preview" id="csvPreview">
+                    <div class="preview-header">
+                        <h3>Vista Previa del Archivo</h3>
+                        <button class="close-preview" id="closePreview"
+                            aria-label="Cerrar vista previa">&times;</button>
+                    </div>
+                    <div class="table-container">
+                        <table id="csvTable" role="grid" aria-label="Tabla de datos CSV"></table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-to-use">
+            <h2>Cómo Utilizar el Visor CSV</h2>
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <h3>Selecciona tu Archivo</h3>
+                    <p>Arrastra y suelta tu archivo CSV en la zona designada o utiliza el botón para seleccionarlo
+                        manualmente.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <h3>Visualiza los Datos</h3>
+                    <p>Tu archivo se procesará automáticamente y se mostrará en una tabla interactiva con todas las
+                        funcionalidades.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <h3>Analiza y Explora</h3>
+                    <p>Utiliza las herramientas de ordenamiento y filtrado para analizar tus datos de manera eficiente.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>Desarrollado con ❤️ por Junior Rumiche</p>
+            <p>Una herramienta gratuita para la comunidad de análisis de datos</p>
+            <div class="footer-links">
+                <a href="https://github.com/junior-rumiche" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
             </div>
         </div>
-        <div class="csv-preview" id="csvPreview">
-            <div class="preview-header">
-                <h3>Vista Previa del Archivo</h3>
-                <button class="close-preview" id="closePreview" aria-label="Cerrar vista previa">&times;</button>
-            </div>
-            <div class="table-container">
-                <table id="csvTable" role="grid" aria-label="Tabla de datos CSV"></table>
-            </div>
-        </div>
-    </div>
+    </footer>
 
     <!-- Scripts -->
     <script type="module" src="js/script.js"></script>
