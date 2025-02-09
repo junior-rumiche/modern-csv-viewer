@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Sitemap: https://modern-csv-viewer.vercel.app/sitemap.xml
+
+# Permitir acceso a todos los recursos estáticos
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+Allow: /*.ico$
+
+# Tiempo de espera entre solicitudes
+Crawl-delay: 10 
