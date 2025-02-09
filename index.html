@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <title>Modern CSV Viewer by Junior Rumiche - Interactive Data Visualization Tool</title>
+    <title>Visor de CSV Moderno por Junior Rumiche - Herramienta Interactiva de Visualización de Datos</title>
     <meta name="description"
-        content="A modern CSV file viewer created by Junior Rumiche with features like pagination, sorting, resizable columns, and drag & drop upload for easy data visualization.">
+        content="Un visor moderno de archivos CSV creado por Junior Rumiche con características como paginación, ordenamiento, columnas redimensionables y carga por arrastrar y soltar para una fácil visualización de datos.">
     <meta name="keywords"
-        content="CSV viewer, data visualization, file upload, table viewer, data analysis, Junior Rumiche, web developer, software engineer">
+        content="Visor CSV, visualización de datos, carga de archivos, visor de tablas, análisis de datos, Junior Rumiche, desarrollador web, ingeniero de software">
     <meta name="author" content="Junior Rumiche">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://modern-csv-viewer.vercel.app">
 
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Modern CSV Viewer by Junior Rumiche">
+    <meta property="og:title" content="Visor de CSV Moderno por Junior Rumiche">
     <meta property="og:description"
-        content="Interactive CSV file viewer with advanced features for data visualization, developed by Junior Rumiche">
+        content="Visor interactivo de archivos CSV con características avanzadas para visualización de datos, desarrollado por Junior Rumiche">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://modern-csv-viewer.vercel.app">
-    <meta property="og:site_name" content="Modern CSV Viewer">
+    <meta property="og:site_name" content="Visor de CSV Moderno">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
@@ -34,8 +34,8 @@
     {
         "@context": "http://schema.org",
         "@type": "WebApplication",
-        "name": "Modern CSV Viewer by Junior Rumiche",
-        "description": "A modern CSV file viewer with advanced features for data visualization, created by Junior Rumiche",
+        "name": "Visor de CSV Moderno por Junior Rumiche",
+        "description": "Un visor moderno de archivos CSV con características avanzadas para visualización de datos, creado por Junior Rumiche",
         "url": "https://modern-csv-viewer.vercel.app",
         "author": {
             "@type": "Person",
@@ -65,22 +65,22 @@
             <div class="upload-icon">
                 <i class="fas fa-file-csv"></i>
             </div>
-            <h2>Drag your CSV file here</h2>
-            <p>or</p>
-            <button class="upload-button">Select file</button>
+            <h2>Arrastra tu archivo CSV aquí</h2>
+            <p>o</p>
+            <button class="upload-button">Seleccionar archivo</button>
             <p class="file-name" id="fileName"></p>
             <div class="upload-progress" id="uploadProgress">
                 <div class="progress-bar"></div>
-                <p class="progress-text">Uploading file...</p>
+                <p class="progress-text">Subiendo archivo...</p>
             </div>
         </div>
         <div class="csv-preview" id="csvPreview">
             <div class="preview-header">
-                <h3>File Preview</h3>
-                <button class="close-preview" id="closePreview" aria-label="Close preview">&times;</button>
+                <h3>Vista Previa del Archivo</h3>
+                <button class="close-preview" id="closePreview" aria-label="Cerrar vista previa">&times;</button>
             </div>
             <div class="table-container">
-                <table id="csvTable" role="grid" aria-label="CSV data table"></table>
+                <table id="csvTable" role="grid" aria-label="Tabla de datos CSV"></table>
             </div>
         </div>
     </div>
