@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <title>Visor CSV Moderno | Visualiza y Analiza Datos - Junior Rumiche</title>
+    <title>Modern CSV Viewer | Visualize and Analyze Data - Junior Rumiche</title>
     <meta name="description"
-        content="Visualiza y analiza archivos CSV de forma interactiva. Herramienta web gratuita con paginación, ordenamiento y columnas ajustables. Desarrollado por Junior Rumiche.">
+        content="Visualize and analyze CSV files interactively. Free web tool with pagination, sorting, and adjustable columns. Developed by Junior Rumiche.">
     <meta name="keywords"
-        content="Visor CSV, visualización de datos, carga de archivos, visor de tablas, análisis de datos, Junior Rumiche, desarrollador web, ingeniero de software">
+        content="CSV Viewer, data visualization, file upload, table viewer, data analysis, Junior Rumiche, web developer, software engineer">
     <meta name="author" content="Junior Rumiche">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://modern-csv-viewer.vercel.app">
 
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Visor CSV Moderno | Visualiza y Analiza Datos - Junior Rumiche">
+    <meta property="og:title" content="Modern CSV Viewer | Visualize and Analyze Data - Junior Rumiche">
     <meta property="og:description"
-        content="Visualiza y analiza archivos CSV de forma interactiva. Herramienta web gratuita con paginación, ordenamiento y columnas ajustables.">
+        content="Visualize and analyze CSV files interactively. Free web tool with pagination, sorting, and adjustable columns.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://modern-csv-viewer.vercel.app">
-    <meta property="og:site_name" content="Visor CSV Moderno">
+    <meta property="og:site_name" content="Modern CSV Viewer">
     <meta property="og:image" content="https://modern-csv-viewer.vercel.app/img/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -41,8 +41,8 @@
     {
         "@context": "http://schema.org",
         "@type": "WebApplication",
-        "name": "Visor de CSV Moderno por Junior Rumiche",
-        "description": "Un visor moderno de archivos CSV con características avanzadas para visualización de datos, creado por Junior Rumiche",
+        "name": "Modern CSV Viewer by Junior Rumiche",
+        "description": "A modern CSV file viewer with advanced features for data visualization, created by Junior Rumiche",
         "url": "https://modern-csv-viewer.vercel.app",
         "author": {
             "@type": "Person",
@@ -67,44 +67,42 @@
 
 <body>
     <header class="main-header">
-        <h1>Visor de CSV Moderno</h1>
-        <p class="header-description">Una herramienta profesional y gratuita para visualizar y analizar archivos CSV de
-            manera eficiente</p>
+        <h1>Modern CSV Viewer</h1>
+        <p class="header-description">A professional and free tool to visualize and analyze CSV files efficiently</p>
     </header>
 
     <main>
         <section class="features">
-            <h2>Características Principales</h2>
+            <h2>Main Features</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <i class="fas fa-table"></i>
-                    <h3>Visualización Interactiva</h3>
-                    <p>Visualiza tus datos CSV en una tabla moderna e interactiva con opciones de ordenamiento y
-                        filtrado avanzado.</p>
+                    <h3>Interactive Visualization</h3>
+                    <p>View your CSV data in a modern, interactive table with advanced sorting and filtering options.
+                    </p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-arrows-alt-h"></i>
-                    <h3>Columnas Ajustables</h3>
-                    <p>Personaliza el ancho de las columnas según tus necesidades para una mejor visualización de los
-                        datos.</p>
+                    <h3>Adjustable Columns</h3>
+                    <p>Customize column widths according to your needs for better data visualization.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-mouse-pointer"></i>
-                    <h3>Arrastrar y Soltar</h3>
-                    <p>Simplemente arrastra y suelta tu archivo CSV para comenzar a analizarlo instantáneamente.</p>
+                    <h3>Drag and Drop</h3>
+                    <p>Simply drag and drop your CSV file to start analyzing it instantly.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-shield-alt"></i>
-                    <h3>Privacidad Garantizada</h3>
-                    <p>Tus datos se procesan localmente en tu navegador, sin almacenamiento en servidores externos.</p>
+                    <h3>Privacy Guaranteed</h3>
+                    <p>Your data is processed locally in your browser, without storage on external servers.</p>
                 </div>
             </div>
         </section>
 
         <section class="upload-section">
-            <h2>Comienza a Analizar tus Datos</h2>
-            <p class="upload-description">Sube tu archivo CSV y descubre una nueva forma de visualizar y analizar tus
-                datos. Compatible con archivos CSV de cualquier tamaño.</p>
+            <h2>Start Analyzing Your Data</h2>
+            <p class="upload-description">Upload your CSV file and discover a new way to visualize and analyze your
+                data. Compatible with CSV files of any size.</p>
 
             <div class="container">
                 <div class="upload-area" id="uploadArea">
@@ -112,48 +110,45 @@
                     <div class="upload-icon">
                         <i class="fas fa-file-csv"></i>
                     </div>
-                    <h2>Arrastra tu archivo CSV aquí</h2>
-                    <p>o</p>
-                    <button class="upload-button">Seleccionar archivo</button>
+                    <h2>Drag your CSV file here</h2>
+                    <p>or</p>
+                    <button class="upload-button">Select file</button>
                     <p class="file-name" id="fileName"></p>
                     <div class="upload-progress" id="uploadProgress">
                         <div class="progress-bar"></div>
-                        <p class="progress-text">Subiendo archivo...</p>
+                        <p class="progress-text">Uploading file...</p>
                     </div>
                 </div>
                 <div class="csv-preview" id="csvPreview">
                     <div class="preview-header">
-                        <h3>Vista Previa del Archivo</h3>
-                        <button class="close-preview" id="closePreview"
-                            aria-label="Cerrar vista previa">&times;</button>
+                        <h3>File Preview</h3>
+                        <button class="close-preview" id="closePreview" aria-label="Close preview">&times;</button>
                     </div>
                     <div class="table-container">
-                        <table id="csvTable" role="grid" aria-label="Tabla de datos CSV"></table>
+                        <table id="csvTable" role="grid" aria-label="CSV data table"></table>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="how-to-use">
-            <h2>Cómo Utilizar el Visor CSV</h2>
+            <h2>How to Use the CSV Viewer</h2>
             <div class="steps">
                 <div class="step">
                     <span class="step-number">1</span>
-                    <h3>Selecciona tu Archivo</h3>
-                    <p>Arrastra y suelta tu archivo CSV en la zona designada o utiliza el botón para seleccionarlo
-                        manualmente.</p>
+                    <h3>Select Your File</h3>
+                    <p>Drag and drop your CSV file into the designated area or use the button to select it manually.</p>
                 </div>
                 <div class="step">
                     <span class="step-number">2</span>
-                    <h3>Visualiza los Datos</h3>
-                    <p>Tu archivo se procesará automáticamente y se mostrará en una tabla interactiva con todas las
-                        funcionalidades.</p>
+                    <h3>Visualize the Data</h3>
+                    <p>Your file will be processed automatically and displayed in an interactive table with all
+                        features.</p>
                 </div>
                 <div class="step">
                     <span class="step-number">3</span>
-                    <h3>Analiza y Explora</h3>
-                    <p>Utiliza las herramientas de ordenamiento y filtrado para analizar tus datos de manera eficiente.
-                    </p>
+                    <h3>Analyze and Explore</h3>
+                    <p>Use the sorting and filtering tools to analyze your data efficiently.</p>
                 </div>
             </div>
         </section>
@@ -161,8 +156,8 @@
 
     <footer class="main-footer">
         <div class="footer-content">
-            <p>Desarrollado con ❤️ por Junior Rumiche</p>
-            <p>Una herramienta gratuita para la comunidad de análisis de datos</p>
+            <p>Developed with ❤️ by Junior Rumiche</p>
+            <p>A free tool for the data analysis community</p>
             <div class="footer-links">
                 <a href="https://github.com/junior-rumiche" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i> GitHub
